@@ -1,5 +1,6 @@
 package com.naver.stove.aurm.domain.chatroom;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -16,4 +17,8 @@ public class ChatRoom {
     @Column(length = 500, nullable = false)
     private String title;
 
+    @Builder
+    public ChatRoom(String title){
+        this.title = title;
+    }
 }
